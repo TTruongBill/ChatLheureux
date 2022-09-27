@@ -1,0 +1,440 @@
+/*=========================APPROCHE DESKTOP FIRST=================*/
+body {
+    color: #50300F;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+/*=========================NAVIGUATION=================*/
+.menu{
+    background: white;
+    box-shadow: 0px 0px 6px 2px #9b9b9b;
+    z-index: 1;
+}
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px 40px;
+}
+.menu ul li {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.menu .logo2 {
+    display: none;
+}
+.menu .ul .logo1 {
+    display: flex;
+}
+a {
+    color: #50300F;
+    font-weight: bold;
+    text-decoration: none;
+}
+#checkboxPourBoutonBurger {
+    display: none;
+}
+.menu ul .location {
+    position: relative; 
+    margin-left: auto;
+}
+.logo1 {
+    position: relative;
+    margin-left: auto;
+    right: 70px;
+}
+.logo1 img, .logo2 img{
+    border: 1px solid rgb(114, 114, 114);
+    border-radius:5px 5px 5px 5px ;
+}
+.location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.location a:nth-of-type(1) {
+    padding-right:10px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6;
+    z-index: -1;
+}
+
+/*=================================MAIN============================*/
+main {
+    margin: 0px 0px 20px 0px;
+    padding: 0px 40px;
+    text-align: center;
+    display: grid;
+    grid-template-areas:    ". a a ."
+                            "b c d e"
+                            "f g h i ";
+    grid-gap: 20px;
+}
+main p {
+    color: #50300F;
+}
+main div{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.info {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-top: 1px black solid;
+}
+.image {
+    position: relative;
+    bottom: 0.1px;
+    left:0.3px;
+    border: none;
+    max-width: 400px;
+    height: auto;
+}
+main div img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+main div ul{
+    display: flex;
+    flex-direction: row;
+    padding:0px;
+}
+main div ul li{
+    color:#AF8961;
+    font-size: 10px;
+    text-decoration: none;
+    margin-left: 15px;
+}
+main h2 {
+    grid-area: a;
+}
+main .cat1{
+    grid-area: b;
+}
+main .cat2{
+    grid-area: c;
+}
+main .cat3{
+    grid-area: d;
+}
+main .cat4{
+    grid-area: e;
+}
+main .cat5{
+    grid-area: f;
+}
+main .cat6{
+    grid-area: g;
+}
+main .cat7{
+    grid-area: h;
+}
+main .cat8{
+    grid-area: i;
+}
+/*================================FOOTER============================*/
+footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    background-color: #E5E5E5;
+    color : #5D5D5D;
+    font-weight: bold;
+} 
+footer div {
+    display: flex;
+    flex-direction:row;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    padding-right: 40px;
+    margin: 0;
+}
+footer ul li {
+    list-style: none;
+    padding: 5px;
+}
+footer ul li a {
+    margin-left: auto;
+    width: 30px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+/*================================DISPLAY MOBILE============================*/
+@media screen and (max-width: 800px) {
+    /*=========================NAVIGUATION=================*/
+    .menu {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        position: fixed;
+        top: 0px;
+        height: 80px;
+    }
+    .menu ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 94vh;
+        transition: cubic-bezier(1,.18,.45,1.36) 0.8s;
+    }
+    .menu ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        width: 100vw;
+        height: 100%;
+        position: relative;
+        padding-left: 40px;
+        top: 60.6px;
+        left: 0px;
+        z-index: 3;
+        font-size: 40px;
+
+    }
+    .menu ul .logo1 {
+        display: none;
+    }
+    .menu .logo2 {
+        display: flex;
+        order: -1;
+        position: absolute;
+        width: 65px;
+        top: 0px;
+        left: 10px;
+        margin: 10px 0px 10px 10px;
+        right: 0px;
+    }
+    .logo2 img {
+        height: 59px;
+        width: 59px;
+    }
+    /*Forme et emplacement du menu burger*/
+    .boutonBurger {
+        position: fixed;
+        right: 10px;
+        top: 22px;
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 20%, transparent 20%, transparent 40%, rgb(0, 0, 0) 40%, rgb(0, 0, 0) 60%, transparent 60%, transparent 80%, rgb(0, 0, 0) 80%, rgb(0, 0, 0) 100%);
+        margin-right: 1rem;
+        cursor: pointer;
+        z-index: 2;
+        transition: all 0.5s;
+    }
+    /*emplacement du nav avant de cliquer sur le nav*/
+    #checkboxPourBoutonBurger ~ .menu ul{
+        transform: translateX(100vw);
+    }
+
+    /*emplacement du nav après avoir cliquer sur le nav*/
+    #checkboxPourBoutonBurger:checked ~ .menu ul{
+    
+        transform: translateX(20vw);
+        
+    
+    }
+    
+    /*diminuer la luminosité lorsque le checkbox est checked*/
+    #checkboxPourBoutonBurger:checked ~ header,
+    #checkboxPourBoutonBurger:checked ~ main,
+    #checkboxPourBoutonBurger:checked ~ footer {
+        background-color: white;
+        filter: brightness(50%)
+        
+    }
+    /*Tourner le menu burger lorsque le chebox est checked*/
+    #checkboxPourBoutonBurger:checked ~ label > .boutonBurger {
+        transform: rotate(90deg);
+    }
+
+    /*Enlever le petit checkbox pour montrer seulement le menu burger*/
+    #checkboxPourBoutonBurger {
+        display: none;
+    }
+ /*===============================HEADER============================*/
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    header {
+        margin-top:80px;
+    }
+/*===============================BODY============================*/
+    .image {
+        border: none;
+        max-width: 700px;
+        height: auto;
+    }
+    main {
+        padding: 0px 40px;
+        text-align: center;
+        display: grid;
+        grid-template-areas:    "a"
+                                "b"
+                                "c"
+                                "d"
+                                "e"
+                                "f"
+                                "g"
+                                "h"
+                                "i";
+        grid-gap: 20px;
+    }
+    main p{
+        margin: 0px 10px;
+        font-size: 25px;
+    }
+    main .info li{
+        font-size: 10px;
+    }
+/*===============================FOOTER============================*/
+    footer div {
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+    footer p {
+        position: relative;
+        padding-left: 30px;
+    }
+}
+/*================================DISPLAY TABLETTE============================*/
+@media screen and (min-width: 800px) and (max-width:1270px) {
+    .menu {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .image {
+        border: none;
+        min-width: 190px;
+        height: auto;
+    }
+    main {
+        text-align: center;
+        display: grid;
+        grid-template-areas:    ". a ."
+                                "b c d"
+                                "e f g"
+                                "h i .";
+        grid-gap: 20px;
+    }
+    main p {
+       font-size: 25px ; 
+    }
+
+    main .info ul li {
+        font-size: 15px;
+    }
+    /*================================FOOTER============================*/
+    footer {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 10px;
+        background-color: #E5E5E5;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0px;
+    } 
+    footer div {
+        display: flex;
+        flex-direction:column;
+        padding: 10px 40px 20px;
+    }
+    footer div a {
+        padding-top: 10px;
+    }
+}
+/*================================DISPLAY ORDINATEUR============================*/
+@media screen and (min-width: 1270px) {
+    /*===============================NAVIG============================*/
+    .menu {
+        font-size: 25px;
+        height: 60px;
+    }
+        /*===============================HEADER============================*/
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    /*=================================MAIN============================*/
+    
+    main {
+        text-align: center;
+        display: grid;
+        grid-template-areas:    ". a a ."
+                                "b c d e"
+                                "f g h i ";
+        grid-gap: 20px;
+        height: 100%;
+    }
+    .image {
+        border: none;
+        max-width: 500px;
+        min-width: 228px;
+        height: auto;
+    }
+    main img {
+        max-height: 280px;
+    }
+    .info {
+        height: 90px;
+    }
+    main p {
+        font-size: 30px;
+        margin: 0px;
+    }
+    .info li {
+        font-size: 20px;
+        list-style-type:none;
+    }
+
+
+    /*================================FOOTER============================*/
+    footer {
+        font-size: 15px;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: auto; 
+    } 
+    footer div {
+        display: flex;
+        flex-direction:row;
+        padding: 40px;
+    }
+    footer p {
+        right: 67px;
+    }
+}
